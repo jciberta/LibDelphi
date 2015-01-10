@@ -9,11 +9,15 @@ MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
 DCC = $(ROOT)\bin\dcc32.exe $**
 BRCC = $(ROOT)\bin\brcc32.exe $**
 #------------------------------------------------------------------------------
-PROJECTS = DUnit.exe
+PROJECTS = DUnit.exe Demo.exe
 #------------------------------------------------------------------------------
 default: $(PROJECTS)
 #------------------------------------------------------------------------------
 
 DUnit.exe: Test\DUnit.dpr
   $(DCC)
+
+Demo.exe: Demo.dpr
+  $(DCC)
+
 
