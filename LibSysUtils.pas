@@ -7,6 +7,8 @@ uses
     StdCtrls, ExtCtrls, FileCtrl, Buttons, ShlObj, Math, Jpeg, ShellAPI,
     OleCtrls, isp3, Db, DBTables, DBCtrls;
 
+// function to return the CPU clock speed only.                                     
+// Usage: MessageDlg(Format('%.1f MHz', [GetCpuSpeed]), mtConfirmation, [mbOk], 0); 
 function GetCpuSpeed: Comp;
 function GetCurrentUserName: string;
 function GetVolumeName(DriveLetter: Char): string;
@@ -17,8 +19,6 @@ implementation
 uses Registry, MMSystem, DDEMAN, ClipBrd;
 
 function GetCpuSpeed: Comp;
-{ function to return the CPU clock speed only.                                     }
-{ Usage: MessageDlg(Format('%.1f MHz', [GetCpuSpeed]), mtConfirmation, [mbOk], 0); }
 var
     t: DWORD;
     mhi, mlo, nhi, nlo: DWORD;
